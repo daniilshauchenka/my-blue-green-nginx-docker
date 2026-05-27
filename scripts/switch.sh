@@ -15,6 +15,7 @@ sed "s/{{PORT}}/${TARGET_PORT}/g" \
 sudo cp "$NGINX_GENERATED" "$NGINX_TARGET"
 
 sudo nginx -t
+
 sudo systemctl reload nginx
 
 echo "$TARGET_SLOT" > "${STATE_DIR}/active_slot"
