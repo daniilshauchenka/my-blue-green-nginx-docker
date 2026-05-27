@@ -43,8 +43,6 @@ TARGET_ENV_KEY="$(get_slot_env_key "$TARGET_SLOT")"
 
 log "DEPLOY START version=${VERSION} image=${IMAGE} active=${ACTIVE_SLOT} target=${TARGET_SLOT}"
 
-# Image can be local, loaded from app.tar by CI.
-# If it is not in a remote registry, docker pull will fail — that is OK for this lab.
 docker pull "$IMAGE" || true
 
 TMP_ENV="${BASE_DIR}/tmp/slots.env.$$"
