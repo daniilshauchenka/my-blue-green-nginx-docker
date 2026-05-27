@@ -1,0 +1,21 @@
+services:
+
+  app-slot-a:
+    image: ${IMAGE_A}
+
+    container_name: app-slot-a
+
+    restart: unless-stopped
+
+    ports:
+      - "127.0.0.1:8000:80"
+
+  app-slot-b:
+    image: ${IMAGE_B}
+
+    container_name: app-slot-b
+
+    restart: unless-stopped
+
+    ports:
+      - "127.0.0.1:8001:80"

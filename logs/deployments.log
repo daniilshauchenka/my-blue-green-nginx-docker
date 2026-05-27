@@ -1,0 +1,16 @@
+2026-05-27 10:28:21 DEPLOY START version=8 image=app:latest-8 active=slot-a target=slot-b
+2026-05-27 10:29:23 DEPLOY FAILED version=8 image=app:latest-8 exit_code=1
+2026-05-27 12:28:43 DEPLOY START version=10 image=app:10 active=slot-a target=slot-b
+2026-05-27 12:29:45 DEPLOY FAILED version=10 image=app:10 exit_code=1
+2026-05-27 12:34:47 DEPLOY START version=12 image=app:12 active=slot-a target=slot-b
+2026-05-27 12:34:51 SWITCH START target_slot=slot-b target_port=8001
+2026-05-27 12:34:51 SWITCH SUCCESS active_slot=slot-b port=8001
+2026-05-27 12:34:51 DEPLOY SUCCESS version=12 image=app:12 slot=slot-b duration=4s
+2026-05-27 12:37:35 DEPLOY START version=14 image=app:14 active=slot-b target=slot-a
+2026-05-27 12:37:38 SWITCH START target_slot=slot-a target_port=8000
+2026-05-27 12:37:39 SWITCH SUCCESS active_slot=slot-a port=8000
+2026-05-27 12:37:39 DEPLOY SUCCESS version=14 image=app:14 slot=slot-a duration=4s
+2026-05-27 12:39:27 DEPLOY START version=16 image=app:16 active=slot-a target=slot-b
+2026-05-27 12:39:30 SWITCH START target_slot=slot-b target_port=8001
+2026-05-27 12:39:31 SWITCH SUCCESS active_slot=slot-b port=8001
+2026-05-27 12:39:31 DEPLOY SUCCESS version=16 image=app:16 slot=slot-b duration=4s
