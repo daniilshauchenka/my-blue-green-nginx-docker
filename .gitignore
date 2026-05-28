@@ -9,7 +9,8 @@
 # Editor-based HTTP Client requests
 /httpRequests/
 
-.idea/ *.iml
+.idea/
+*.iml
 .DS_Store
 Thumbs.db
 logs/*.log
