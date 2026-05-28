@@ -26,3 +26,7 @@ rollback_log "ROLLBACK START from=${ACTIVE_SLOT} to=${TARGET_SLOT} version=${TAR
 "${BASE_DIR}/scripts/switch.sh" "$TARGET_SLOT"
 
 rollback_log "ROLLBACK SUCCESS active_slot=${TARGET_SLOT} version=${TARGET_VERSION}"
+"${BASE_DIR}/scripts/notify.sh" \
+"Rollback successful
+Version: ${TARGET_VERSION}
+Slot: ${TARGET_SLOT}"

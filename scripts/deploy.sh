@@ -43,7 +43,9 @@ TARGET_ENV_KEY="$(get_slot_env_key "$TARGET_SLOT")"
 
 log "DEPLOY START version=${VERSION} image=${IMAGE} active=${ACTIVE_SLOT} target=${TARGET_SLOT}"
 
-docker pull "$IMAGE" || true
+log "PULL IMAGE image=${IMAGE}"
+
+docker pull "$IMAGE"
 
 TMP_ENV="${BASE_DIR}/tmp/slots.env.$$"
 
@@ -56,6 +58,7 @@ else
 fi
 
 docker compose \
+  -p "${COMPOSE_PROJECT_NAME}" \
   --env-file "$TMP_ENV" \
   -f "${COMPOSE_DIR}/docker-compose.yaml" \
   up -d "$TARGET_SERVICE"

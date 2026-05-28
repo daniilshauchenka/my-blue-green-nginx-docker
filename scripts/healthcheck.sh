@@ -4,7 +4,7 @@ set -euo pipefail
 source /opt/blue-green/scripts/common.sh
 
 PORT="$1"
-URL="http://127.0.0.1:${PORT}/inner/healthcheck"
+URL="http://127.0.0.1:${PORT}${HEALTHCHECK_PATH}"
 
 health_log "HEALTHCHECK START url=${URL}"
 

@@ -4,7 +4,7 @@ upstream app_backend {
 
 server {
 
-    listen 80;
+    listen {{NGINX_PORT}};
 
     server_name _;
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASE_DIR="/opt/blue-green"
+BASE_DIR="${RUNTIME_PATH:-/opt/blue-green}"
 COMPOSE_DIR="${BASE_DIR}/compose"
 STATE_DIR="${BASE_DIR}/state"
 LOG_DIR="${BASE_DIR}/logs"

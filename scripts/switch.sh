@@ -8,7 +8,9 @@ TARGET_PORT="$(get_slot_port "$TARGET_SLOT")"
 
 log "SWITCH START target_slot=${TARGET_SLOT} target_port=${TARGET_PORT}"
 
-sed "s/{{PORT}}/${TARGET_PORT}/g" \
+sed \
+  -e "s/{{PORT}}/${TARGET_PORT}/g" \
+  -e "s/{{NGINX_PORT}}/${NGINX_PORT}/g" \
   "$NGINX_TEMPLATE" \
   > "$NGINX_GENERATED"
 
